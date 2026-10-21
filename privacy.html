@@ -10,7 +10,7 @@
 <main>
 <header><img src="icon.png" alt=""><a href="./">Kanji Key</a></header>
 <h1>Privacy Policy</h1>
-<p class="muted">Last updated: October 19, 2026</p>
+<p class="muted">Last updated: October 21, 2026</p>
 
 <p>Kanji Key is an iPhone app that asks you to write a Japanese kanji before you open the apps you choose. This policy explains what data the app uses and where it goes. In short: almost everything stays on your iPhone. We do not show ads, we do not track you, and we do not sell data.</p>
 
@@ -28,15 +28,17 @@
 <li>We receive an anonymous user identifier from Apple. We do not ask for your name or email address.</li>
 <li>We store a copy of your learning progress and lock settings (not the apps you lock) on our server, so it can be restored on a new iPhone.</li>
 <li>We store a token from Apple that lets us revoke your Sign in with Apple authorization when you delete your account.</li>
+<li>When you sign in, the progress on your iPhone is combined with your account's progress (for each kanji, the newer record is kept). If a different account had signed in to Kanji Key on that iPhone before, your account's progress replaces the progress on that iPhone instead. If your account has no progress on our server yet, the progress already on that iPhone is saved to your account.</li>
 </ul>
-<p>The server is run by <a href="https://supabase.com/privacy">Supabase</a> in the European Union (Ireland). Only you can read your data in the app. We use it only to sync your progress.</p>
+<p>The database is run by <a href="https://supabase.com/privacy">Supabase</a> in the European Union (Ireland). Signing in and deleting your account are handled by Supabase Edge Functions, which may run in a Supabase region outside the European Union. Only you can access it from the app. We can access it only to run the service, use it only to sync your progress, and keep it until you delete your account. The token from Apple is used only to revoke the authorization and is deleted with your account.</p>
 
 <h2>Usage statistics</h2>
-<p>To improve the app, Kanji Key sends usage statistics to our server: which steps of the setup and the subscription screen you reached and how long they took, lessons and reviews you finished (number of kanji, accuracy, XP), lock events (when a lock screen was used, a kanji was written, an app was unlocked or locked again), your settings (such as the number of kanji to write and how many apps are locked, not which apps), whether Screen Time and notifications are allowed, your subscription status, errors, and crash and freeze reports from iOS.</p>
-<p>Each event comes with the app version, iOS version, iPhone model, region and language, and a random identifier that is created when you install the app. This identifier is not your Apple ID, name, email or advertising identifier, and it is not linked to your account. It is deleted when you delete the app, and it is sent without your account, so we do not link these statistics to you. We keep them for at most 25 months and use them only to understand and improve the app, not for advertising, and we do not share them with anyone. The apps you lock and your Screen Time usage never leave your iPhone.</p>
+<p>To improve the app, Kanji Key sends usage statistics to our server: which steps of the setup and the subscription screen you reached and how long they took, lessons and reviews you finished (number of kanji, accuracy, XP), lock events (when a lock screen was used, a kanji was written, an app was unlocked or locked again) and how you use the writing screen (hints, clearing, skipping, and the time to the first stroke), your settings (such as the number of kanji to write and how many apps are locked, not which apps), whether Screen Time and notifications are allowed, your subscription status and when a free trial or subscription started (not payment details, which Apple handles), errors, and crash and freeze reports from iOS.</p>
+<p>Each event comes with the app version, iOS version, iPhone model, region and language, and a random identifier that is created when you install the app. This identifier is not your Apple Account, name, email or advertising identifier, and it is not linked to your account. It is deleted when you delete the app, and it is sent without your account, so we do not link these statistics to you. We keep them for at most 25 months and use them only to understand and improve the app, not for advertising, and we do not share them with anyone. The apps you lock and your Screen Time usage never leave your iPhone.</p>
+<p>You can turn this off at any time in Kanji Key: Settings › Share usage statistics. While it is off, Kanji Key sends no usage statistics.</p>
 
 <h2>Requesting a language</h2>
-<p>If Kanji Key is not in your language yet, you can send a request. We store only the country you picked and the language name you typed. This is not linked to you or your device.</p>
+<p>If Kanji Key is not in your language yet, you can send a request. We store only the country you picked and the language name you entered. This is not linked to you or your device.</p>
 
 <h2>Deleting your data</h2>
 <p>In the app, go to <strong>Settings › Delete account</strong>. This deletes your account and all data on our server, and revokes the app's Sign in with Apple authorization. Your progress on your iPhone stays until you delete the app.</p>
